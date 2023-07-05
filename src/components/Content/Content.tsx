@@ -1,6 +1,4 @@
-import React, { ReactNode } from 'react'
-
-const Content = ({ children }: { children: ReactNode }) => {
+const Content = ({ children }: React.PropsWithChildren) => {
   return (
     <section className='flex flex-col grow'>
       <article
@@ -14,3 +12,4 @@ const Content = ({ children }: { children: ReactNode }) => {
 }
 
 export default Content
+

@@ -1,7 +1,11 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const NavbarItem = ({ route, item }) => {
+type props = {
+  route: string
+  item: string
+}
+
+const NavbarItem = ({ route, item }: props) => {
   return (
     <NavLink to={route}>
       <button
@@ -16,3 +20,4 @@ const NavbarItem = ({ route, item }) => {
 }
 
 export default NavbarItem
+

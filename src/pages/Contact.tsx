@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../components/Title/Title.tsx'
 import Text from '../components/Text/Text.tsx'
 import emailSvg from '../assets/email.svg'
@@ -35,3 +34,4 @@ const Contact = () => {
 }
 
 export default Contact
+

@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../components/Title/Title.tsx'
 import Text from '../components/Text/Text.tsx'
 
@@ -21,3 +20,4 @@ const Home = () => {
 }
 
 export default Home
+

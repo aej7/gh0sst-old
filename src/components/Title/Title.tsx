@@ -1,6 +1,4 @@
-import React from 'react'
-
-const Title = ({ children }) => {
+const Title = ({ children }: React.PropsWithChildren) => {
   return (
     <h1 className='text-md md:text-xl text-center tracking-widest lowercase drop-shadow-2xl'>
       {children}
@@ -9,3 +7,4 @@ const Title = ({ children }) => {
 }
 
 export default Title
+

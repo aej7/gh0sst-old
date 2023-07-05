@@ -1,4 +1,3 @@
-import React from 'react'
 import NavbarItem from './NavbarItem'
 
 const Navbar = () => {
@@ -23,3 +22,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

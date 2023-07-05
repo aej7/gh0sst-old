@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Burger = () => {
   return (
     <div className='space-y-2'>
@@ -11,3 +9,4 @@ const Burger = () => {
 }
 
 export default Burger
+

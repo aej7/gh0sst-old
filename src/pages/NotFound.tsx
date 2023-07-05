@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../components/Title/Title.tsx'
 
 const NotFound = () => {
@@ -8,3 +7,4 @@ const NotFound = () => {
 export default NotFound
 
 //TODO Touch up the design of ErrorPage 23.6.2023
+

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 import Projects from './pages/Projects.tsx'
@@ -24,3 +23,4 @@ const App = () => {
 }
 
 export default App
+
