@@ -14,17 +14,7 @@ const Header = () => {
 		return () => window.removeEventListener('resize', handleWindowResize)
 	}, [])
 
-	return width < breakpoint ? <MobileNav /> : <DesktopNav />
-}
-
-const MobileNav = () => {
-	return (
-		<header>
-			<nav>
-				<Hamburger />
-			</nav>
-		</header>
-	)
+	return width > breakpoint ? <DesktopNav /> : <MobileNav />
 }
 
 const DesktopNav = () => {
@@ -37,5 +27,14 @@ const DesktopNav = () => {
 	)
 }
 
-export default Header
+const MobileNav = () => {
+	return (
+		<header>
+			<nav>
+				<Hamburger />
+			</nav>
+		</header>
+	)
+}
 
+export default Header

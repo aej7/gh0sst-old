@@ -9,9 +9,8 @@ const NavbarItem = ({ route, item }: props) => {
 	return (
 		<NavLink to={route}>
 			<button
-				className='py-5 mt-7 font-light tracking-wider sm:tracking-widest italic text-md
-        md:text-xl hover:underline hover:decoration-from-font hover:underline-offset-4'
-				role='navigation'
+				className='py-5 mt-7 text-xl font-light uppercase tracking-widest italic hover:underline hover:decoration-from-font hover:underline-offset-4'
+				aria-label={item}
 			>
 				<h2>{item}</h2>
 			</button>
@@ -23,16 +22,16 @@ const Navbar = () => {
 	return (
 		<ul className='flex flex-row justify-evenly' role='navigation'>
 			<li>
-				<NavbarItem item='HOME' route='/' />
+				<NavbarItem item='Home' route='/' />
 			</li>
 			<li>
-				<NavbarItem item='PROJECTS' route='/projects' />
+				<NavbarItem item='Projects' route='/projects' />
 			</li>
 			<li>
-				<NavbarItem item='ABOUT' route='/about' />
+				<NavbarItem item='About' route='/about' />
 			</li>
 			<li>
-				<NavbarItem item='CONTACT' route='/contact' />
+				<NavbarItem item='Contact' route='/contact' />
 			</li>
 		</ul>
 	)

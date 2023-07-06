@@ -20,18 +20,11 @@ const Hamburger = () => {
 const Icon = () => {
 	return (
 		<>
-			<span className='w-8 h-px bg-neutral-300'></span>
-			<span className='w-8 h-px bg-neutral-300'></span>
-			<span className='w-8 h-px bg-neutral-300'></span>
+			<span className='w-8 h-px bg-white'></span>
+			<span className='w-8 h-px bg-white'></span>
+			<span className='w-8 h-px bg-white'></span>
 		</>
 	)
 }
 
-const Menu = () => {
-	;<ul>
-		<li></li>
-	</ul>
-}
-
 export default Hamburger
-
