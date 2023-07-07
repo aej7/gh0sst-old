@@ -21,7 +21,7 @@ const DesktopNav = () => {
 	return (
 		<header>
 			<nav>
-				<Navbar />
+				<Navbar className='flex flex-row justify-evenly' />
 			</nav>
 		</header>
 	)
