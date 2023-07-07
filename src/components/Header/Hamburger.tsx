@@ -1,12 +1,13 @@
 import { useState, useContext } from 'react'
-import { ContentVisibleContext } from '../../context/ContentVisibleContext.tsx'
+import { ContentVisibilityContext } from '../../context/ContentVisibilityContext.tsx'
 import Navbar from './Navbar.tsx'
 
 const Hamburger = () => {
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+
 	// This works even though there's an error so I'm adding an ignore while I find the culprit
 	//@ts-ignore
-	const { setIsContentVisible } = useContext(ContentVisibleContext)
+	const { setIsContentVisibility } = useContext(ContentVisibilityContext)
 
 	return (
 		<div
@@ -15,7 +16,9 @@ const Hamburger = () => {
 				isHamburgerOpen ? setIsHamburgerOpen(false) : setIsHamburgerOpen(true)
 			}
 		>
-			{isHamburgerOpen ? setIsContentVisible(false) : setIsContentVisible(true)}
+			{isHamburgerOpen
+				? setIsContentVisibility(false)
+				: setIsContentVisibility(true)}
 			{isHamburgerOpen ? <OpenHamburger /> : <Icon />}
 		</div>
 	)
@@ -25,7 +28,10 @@ const OpenHamburger = () => {
 	return (
 		<>
 			<Icon />
-			<Navbar className='flex flex-col items-center absolute' />
+			<Navbar
+				className='flex flex-col items-center pt-14 gap-8'
+				itemStyle='text-2xl'
+			/>
 		</>
 	)
 }
@@ -35,7 +41,7 @@ const Icon = () => {
 		<>
 			<span className='w-8 h-px bg-white'></span>
 			<span className='w-8 h-px bg-white'></span>
-			<span className='w-8 h-px bg-white'></span>
+			<span className='w-8 h-px bg-white inline-block'></span>
 		</>
 	)
 }
