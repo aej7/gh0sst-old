@@ -21,7 +21,10 @@ const DesktopNav = () => {
 	return (
 		<header>
 			<nav>
-				<Navbar className='flex flex-row justify-evenly' />
+				<Navbar
+					className='flex flex-row justify-evenly'
+					itemStyle='py-5 mt-7 text-xl font-light uppercase tracking-widest italic hover:underline hover:decoration-from-font hover:underline-offset-4'
+				/>
 			</nav>
 		</header>
 	)

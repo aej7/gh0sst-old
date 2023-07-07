@@ -25,7 +25,7 @@ const OpenHamburger = () => {
 	return (
 		<>
 			<Icon />
-			<Navbar className='flex flex-col items-center gap-6 absolute m-auto' />
+			<Navbar className='flex flex-col items-center absolute' />
 		</>
 	)
 }
