@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ContentVisibleContext } from '../../context/ContentVisibleContext.tsx'
 import Navbar from './Navbar.tsx'
 
 const Hamburger = () => {
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+	const { setIsContentVisible } = useContext(ContentVisibleContext)
 
 	return (
 		<div
 			className='space-y-2 flex items-center flex-col p-5 mt-7 rounded-sm'
 			onClick={() =>
-				isHamburgerOpen === false
-					? setIsHamburgerOpen(true)
-					: setIsHamburgerOpen(false)
+				isHamburgerOpen ? setIsHamburgerOpen(false) : setIsHamburgerOpen(true)
 			}
 		>
+			{isHamburgerOpen ? setIsContentVisible(false) : setIsContentVisible(true)}
 			{isHamburgerOpen ? <OpenHamburger /> : <Icon />}
 		</div>
 	)
