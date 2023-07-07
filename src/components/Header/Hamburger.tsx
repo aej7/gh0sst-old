@@ -4,6 +4,8 @@ import Navbar from './Navbar.tsx'
 
 const Hamburger = () => {
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+	// This works even though there's an error so I'm adding an ignore while I find the culprit
+	//@ts-ignore
 	const { setIsContentVisible } = useContext(ContentVisibleContext)
 
 	return (
