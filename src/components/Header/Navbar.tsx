@@ -18,9 +18,9 @@ const NavbarItem = ({ route, item }: props) => {
 	)
 }
 
-const Navbar = () => {
+const Navbar = ({ className }: React.HTMLAttributes<HTMLUListElement>) => {
 	return (
-		<ul className='flex flex-row justify-evenly' role='navigation'>
+		<ul className={className} role='navigation'>
 			<li>
 				<NavbarItem item='Home' route='/' />
 			</li>
@@ -38,4 +38,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
