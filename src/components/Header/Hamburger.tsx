@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Navbar from './Navbar.tsx'
 
 const Hamburger = () => {
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
@@ -12,8 +13,17 @@ const Hamburger = () => {
 					: setIsHamburgerOpen(false)
 			}
 		>
-			<Icon />
+			{isHamburgerOpen ? <OpenHamburger /> : <Icon />}
 		</div>
+	)
+}
+
+const OpenHamburger = () => {
+	return (
+		<>
+			<Icon />
+			<Navbar className='flex flex-col items-center gap-6 absolute m-auto' />
+		</>
 	)
 }
 
